@@ -12,7 +12,7 @@ app.use(express.json());
 
 // MongoDB Connection
 mongoose
-    .connect("mongodb+srv://harsh:<Harsh@6644>@cluster0.arafzy1.mongodb.net/?appName=Cluster0")
+    .connect("mongodb+srv://harsh:<Harsh6644>@cluster0.arafzy1.mongodb.net/?appName=Cluster0")
     .then(() => console.log("✅ Custom MongoDB Connected"))
     .catch((err) => console.error("❌ MongoDB Connection Error:", err));
 
