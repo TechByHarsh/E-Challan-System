@@ -31,15 +31,13 @@ app.use("/api/vehicles", require("./routes/vehicleRoutes"));
 // ===============================
 // Serve React Frontend (PROD)
 // ===============================
-
-// Absolute path to CRA build folder
 const buildPath = path.resolve(__dirname, "..", "build");
 
-// Serve static assets
+// Serve static files
 app.use(express.static(buildPath));
 
-// Catch-all (must be AFTER API routes)
-app.get("*", (req, res) => {
+// Catch-all (Express v5 compatible)
+app.get("/*", (req, res) => {
   res.sendFile(path.join(buildPath, "index.html"));
 });
 
